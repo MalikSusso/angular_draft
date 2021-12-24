@@ -1,0 +1,22 @@
+
+<div class="container pt-3">
+
+  <div *ngIf="todos" class="card" style="width: 18rem;">
+
+    <img class="card-img-top" [src]="todos.image" alt="Card image cap">
+
+    <div class="card-body">
+      <h5 class="card-title">{{todos.toDoName}}</h5>
+      <p>{{todos.description}}</p>
+    </div>
+
+  </div>
+
+  <button type="button" class="btn btn-primary mt-4" routerLink="/todos">Return to Projects</button>
+
+
+</div>
+
+
+<p *ngIf="!todos">{{error}}</p>
+
