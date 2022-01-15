@@ -11,12 +11,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SingleTodoComponent } from './single-todo/single-todo.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 export const ROUTES : Routes = [
   {path:'home' , component : HomeComponent},
   {path:'todos' , component : TodoComponent},
   {path:'not-found' , component : NotFoundComponent},
   {path:'contact' , component : ContactComponent},
+  {path : 'add-todo' , component : AddTodoComponent},
   {path : 'single-todo/:id',component:SingleTodoComponent},
   {path : '',component:HomeComponent},
   {path : '**', pathMatch:'full' , redirectTo : 'not-found'}
@@ -31,7 +33,8 @@ export const ROUTES : Routes = [
     HomeComponent,
     NotFoundComponent,
     SingleTodoComponent,
-    ContactComponent
+    ContactComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,

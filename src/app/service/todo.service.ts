@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { Todo } from '../model/todo.model';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ import { Subject } from 'rxjs';
 export class TodoService {
 
   today:Date = new Date ;
-  todos ;
+  todos : Todo[] ;
   toDoSlice ;
   toDoSubject = new Subject < any[] >() ;
 
@@ -129,7 +130,7 @@ constructor() {
       },
     ];
   this.emitTodos();
-  }, 6000);
+  }, 300);
 
 }
 

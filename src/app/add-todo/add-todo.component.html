@@ -1,0 +1,35 @@
+<h1> Add Todo</h1>
+
+{{todo | json}}
+<form #addTodoForm = "ngForm">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Todo Name</label>
+    <input type="text" class="form-control" name="toDoName" [(ngModel)] = "todo.toDoName" required>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label >Todo Description</label>
+    <textarea class="form-control" rows="6" name="description" [(ngModel)] = "todo.description" required></textarea>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Url Image</label>
+    <input type="text" class="form-control" name="image" [(ngModel)] = "todo.image" required>
+  </div>
+  <br>
+
+<div class="form-group">
+  <label for="">Status</label>
+  <select class="form-control" name="status" [(ngModel)] = "todo.status" required>
+    <option value="true"> On Going</option>
+    <option value="false">Done</option>
+  </select>
+</div>
+<br>
+
+<button [disabled]="addTodoForm.invalid" class="btn btn-success" type="button">Submit</button>
+
+</form>
+
