@@ -29,7 +29,7 @@
 </div>
 <br>
 
-<button [disabled]="addTodoForm.invalid" class="btn btn-success" type="button">Submit</button>
+<button [disabled]="addTodoForm.invalid" class="btn btn-success" type="button" (click)="onSubmit()">Submit</button>
 
 </form>
 

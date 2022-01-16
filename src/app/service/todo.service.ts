@@ -138,4 +138,9 @@ emitTodos () {
   this.toDoSubject.next(this.todos)
 }
 
+addTodo (todo : Todo) : void {
+  this.todos.unshift(todo);
+  this.emitTodos();
+}
+
 }
